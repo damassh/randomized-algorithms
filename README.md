@@ -1,5 +1,5 @@
 # Randomized Algorithms
-## Exercise 1 Selectioin Aglorithms
+## Exercise 1 Selection Aglorithms
 
 1. Implement the lazy select algorithm (given in the lecture). You are also welcom to refer to the following [slides](https://people.cs.umass.edu/~mcgregor/711S09/lec04.pdf).
 2. Implement the [Quickselect algorithm](https://en.wikipedia.org/wiki/Quickselect).
