@@ -1,0 +1,132 @@
+4:17:18 pm: Executing task 'Main.main()'...
+
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+
+> Task :Main.main()
+Start
+Benchmark: exponential_distribution1000.csv
+Size: 1000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 250					 266.347563			12
+quickSelect			 250					 266.347563			1
+medOfMeds			 250					 266.347563			2
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution10000.csv
+Size: 10000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 2500					 288.351143			21
+quickSelect			 2500					 288.351143			3
+medOfMeds			 2500					 288.351143			6
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution100000.csv
+Size: 100000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 25000					 289.476621			70
+quickSelect			 25000					 289.476621			8
+medOfMeds			 25000					 289.476621			19
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution1000000.csv
+Size: 1000000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 250000					 287.391472			1512
+quickSelect			 250000					 287.391472			14
+medOfMeds			 250000					 287.391472			46
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution10000000.csv
+Size: 10000000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 2500000					 287.552953			35874
+quickSelect			 2500000					 287.552953			103
+medOfMeds			 2500000					 287.552953			804
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution1000.csv
+Size: 1000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 250					 978.260679			0
+quickSelect			 250					 978.260679			0
+medOfMeds			 250					 978.260679			0
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution10000.csv
+Size: 10000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 2500					 978.810152			1
+quickSelect			 2500					 978.810152			0
+medOfMeds			 2500					 978.810152			1
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution100000.csv
+Size: 100000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 25000					 978.420362			29
+quickSelect			 25000					 978.420362			1
+medOfMeds			 25000					 978.420362			5
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution1000000.csv
+Size: 1000000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 250000					 978.465801			882
+quickSelect			 250000					 978.465801			12
+medOfMeds			 250000					 978.465801			51
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution10000000.csv
+Size: 10000000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 2500000					 978.469101			37374
+quickSelect			 2500000					 978.469101			95
+medOfMeds			 2500000					 978.469101			938
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution1000.csv
+Size: 1000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 250					 258.296095			0
+quickSelect			 250					 258.296095			0
+medOfMeds			 250					 258.296095			0
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution10000.csv
+Size: 10000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 2500					 247.719628			2
+quickSelect			 2500					 247.719628			0
+medOfMeds			 2500					 247.719628			0
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution100000.csv
+Size: 100000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 25000					 250.846076			29
+quickSelect			 25000					 250.846076			1
+medOfMeds			 25000					 250.846076			7
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution1000000.csv
+Size: 1000000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 250000					 250.310995			1227
+quickSelect			 250000					 250.310995			11
+medOfMeds			 250000					 250.310995			50
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution10000000.csv
+Size: 10000000
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 2500000					 250.156197			34012
+quickSelect			 2500000					 250.156197			115
+medOfMeds			 2500000					 250.156197			725
+---------------------------------------------------------------------------------------
+
+BUILD SUCCESSFUL in 2m 11s
+3 actionable tasks: 2 executed, 1 up-to-date
+4:19:30 pm: Task execution finished 'Main.main()'.

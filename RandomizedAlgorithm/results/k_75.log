@@ -1,0 +1,117 @@
+4:21:03 pm: Executing task 'Main.main()'...
+
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+
+> Task :Main.main()
+Start
+Benchmark: exponential_distribution1000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 750					 1393.781636			10
+quickSelect			 750					 1393.781636			1
+medOfMeds			 750					 1393.781636			2
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution10000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 7500					 1400.954949			20
+quickSelect			 7500					 1400.954949			4
+medOfMeds			 7500					 1400.954949			5
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution100000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 75000					 1396.625937			103
+quickSelect			 75000					 1396.625937			11
+medOfMeds			 75000					 1396.625937			19
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution1000000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 750000					 1385.435724			1441
+quickSelect			 750000					 1385.435724			6
+medOfMeds			 750000					 1385.435724			46
+---------------------------------------------------------------------------------------
+Benchmark: exponential_distribution10000000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 7500000					 1385.607085			59628
+quickSelect			 7500000					 1385.607085			385
+medOfMeds			 7500000					 1385.607085			1275
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution1000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 750					 1018.494712			0
+quickSelect			 750					 1018.494712			0
+medOfMeds			 750					 1018.494712			0
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution10000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 7500					 1020.707408			3
+quickSelect			 7500					 1020.707408			0
+medOfMeds			 7500					 1020.707408			1
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution100000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 75000					 1021.076887			50
+quickSelect			 75000					 1021.076887			1
+medOfMeds			 75000					 1021.076887			7
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution1000000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 750000					 1021.109425			1568
+quickSelect			 750000					 1021.109425			17
+medOfMeds			 750000					 1021.109425			55
+---------------------------------------------------------------------------------------
+Benchmark: gamma_distribution10000000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 7500000					 1021.128898			39668
+quickSelect			 7500000					 1021.128898			136
+medOfMeds			 7500000					 1021.128898			613
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution1000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 750					 741.068328			0
+quickSelect			 750					 741.068328			0
+medOfMeds			 750					 741.068328			0
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution10000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 7500					 760.619579			1
+quickSelect			 7500					 760.619579			0
+medOfMeds			 7500					 760.619579			1
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution100000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 75000					 749.882122			29
+quickSelect			 75000					 749.882122			2
+medOfMeds			 75000					 749.882122			5
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution1000000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 750000					 749.83431			888
+quickSelect			 750000					 749.83431			10
+medOfMeds			 750000					 749.83431			67
+---------------------------------------------------------------------------------------
+Benchmark: uniform_distribution10000000.csv
+Algorithm 			 k position 		 kth element 		 Execution Time(ms)
+---------------------------------------------------------------------------------------
+lazySelect			 7500000					 749.976419			46005
+quickSelect			 7500000					 749.976419			258
+medOfMeds			 7500000					 749.976419			815
+---------------------------------------------------------------------------------------
+
+BUILD SUCCESSFUL in 2m 50s
+3 actionable tasks: 2 executed, 1 up-to-date
+4:23:54 pm: Task execution finished 'Main.main()'.
