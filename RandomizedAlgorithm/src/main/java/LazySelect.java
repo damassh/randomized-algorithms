@@ -6,8 +6,8 @@ import java.util.Random;
 
 public class LazySelect {
     
-    public static List<Integer> generateR(int[] arrNumbers, int size) {
-        List<Integer> R = new ArrayList<>(size);
+    public static List<Double> generateR(double[] arrNumbers, int size) {
+        List<Double> R = new ArrayList<>(size);
         Random rand = new Random();
         int i = 0;
         while (i < size) {
@@ -20,17 +20,24 @@ public class LazySelect {
         Collections.sort(R);
         return R;
     }
-    public static int select(int[] arrNumbers, int k) {
+    public static double select(double[] arrNumbers, int k) {
+        // validate rank bound
+        if (k == arrNumbers.length) {
+            return Arrays.stream(arrNumbers).max().getAsDouble();
+        } else if (k == 1) {
+            return Arrays.stream(arrNumbers).min().getAsDouble();
+        }
+
         int len = arrNumbers.length;
         int rSize = (int) Math.pow(len, 0.75);
-        List<Integer> R = generateR(arrNumbers, rSize);
+        List<Double> R = generateR(arrNumbers, rSize);
         int kn = (int) (k * Math.pow(len, -0.25));
         int rankA = (int) Math.max(kn - Math.sqrt(len), 0);
         int rankB = (int) Math.min(kn + Math.sqrt(len), rSize - 1);
 
         int low = 0;
         int high = 0;
-        List<Integer> P = new ArrayList<>();
+        List<Double> P = new ArrayList<>();
 
         for (int i = 0; i < len; i++) {
             if (arrNumbers[i] < R.get(rankA)) low++;
@@ -48,34 +55,15 @@ public class LazySelect {
         }
     }
 
-    public static Integer run(int[] arrNumbers, int k) {
-        int val = 0;
-        if (k == arrNumbers.length) {
-            return Arrays.stream(arrNumbers).max().getAsInt();
-        } else if (k == 1) {
-            return Arrays.stream(arrNumbers).min().getAsInt();
-        }
-
-        val = select(arrNumbers, k);
-        return val;
-    }
-
-//
-    public static void main(String[] args) {
-        int[] arrNumbers = new int[] { 8, 33, 17, 51, 57, 49, 35, 11, 25, 37, 14, 3, 2, 13, 52, 12, 6, 29, 32, 54, 5, 16, 22, 23, 7 };
-        int k = 17;
-        int val = -1;
+    public static double run(double[] arrNumbers, int k) {
+        double val = -1;
         if (k > arrNumbers.length || k <= 0) {
             System.out.println("Array length is less than k");
         } else {
             while(val == -1) {
-                val = run(arrNumbers, k);
-            }
-            if (val != -1) {
-                System.out.println("kth smallest number: " + val);
-            } else {
-                System.out.println("Maximum number of runs exceeded. Algorithm failed to produce correct output.");
+                val = select(arrNumbers, k);
             }
         }
+        return val;
     }
 }

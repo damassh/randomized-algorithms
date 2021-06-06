@@ -5,24 +5,14 @@ import java.util.Set;
 
 public class MedianOfMedians {
 
-    public int findMedian(Integer[] arrNumbers, int i, int n) {
-        if (i >= n) {
-            Arrays.sort(arrNumbers, n, i);
-        } else {
-            Arrays.sort(arrNumbers, i, n);
-        }
-        // return the median element
-        return arrNumbers[n / 2];
-    }
-
-    public Integer[] swap(Integer[] arrNumbers, int i, int j) {
-        int temp = arrNumbers[i];
+    public double[] swap(double[] arrNumbers, int i, int j) {
+        double temp = arrNumbers[i];
         arrNumbers[i] = arrNumbers[j];
         arrNumbers[j] = temp;
         return arrNumbers;
     }
 
-    public int partition(Integer[] arrNumbers, int left, int right, int x) {
+    public int partition(double[] arrNumbers, int left, int right, double x) {
         int i;
         for (i = left; i < right; i++) {
             if (arrNumbers[i] == x) break;
@@ -41,7 +31,7 @@ public class MedianOfMedians {
         return i;
     }
 
-    public int getMedianOfMedians(Integer[] arrNumbers, int i) {
+    public double getMedianOfMedians(double[] arrNumbers, int i) {
         if (i == 1) {
             return arrNumbers[i - 1];
         } else {
@@ -49,22 +39,31 @@ public class MedianOfMedians {
         }
     }
 
-    public int select(Integer[] arrNumbers, int left, int right, int k) {
+    public double select(double[] arrNumbers, int left, int right, int k) {
         if (k > 0 && k <= right - left + 1) {
             int n = right - left + 1;
 
             int i;
-            Integer[] median = new Integer[(n + 4) / 5];
-            for (i = 0; i < n / 5; i++) {
-                median[i] = findMedian(arrNumbers, left + i * 5, 5);
+            double[] median = new double[(n + 4) / 5];
+            for (i = 0; i < median.length - 1; i++) {
+                double[] arrTemp = Arrays.copyOfRange(arrNumbers, 5 * i + left, 5 * i + left + 4);
+                Arrays.sort(arrTemp);
+                median[i]  = arrTemp[2];
             }
-            // For last group with less than 5 elements
-            if (i * 5 < n) {
-                median[i] = findMedian(arrNumbers, left + i * 5, n % 5);
+
+            if(n % 5 == 0) {
+                double[] arrTemp = Arrays.copyOfRange(arrNumbers, 5 * i + left, 5 * i + left + 4);
+                Arrays.sort(arrTemp);
+                median[i]  = arrTemp[2];
+                i++;
+            } else {
+             double[] arrTemp = Arrays.copyOfRange(arrNumbers, 5 * i + left, 5 * i + left + (n % 5));
+                Arrays.sort(arrTemp);
+                median[i]  = arrTemp[(n % 5) / 2];
                 i++;
             }
 
-            int medianOfMedians = getMedianOfMedians(median, i);
+            double medianOfMedians = getMedianOfMedians(median, i);
             int position = partition(arrNumbers, left, right, medianOfMedians);
 
             // If position is same as k
@@ -78,27 +77,5 @@ public class MedianOfMedians {
         }
         // If k is more than the number of elements in array
         return Integer.MAX_VALUE;
-    }
-
-    public static void main(String[] args) {
-        MedianOfMedians medOfMeds = new MedianOfMedians();
-//        int arr[] = {12, 3, 5, 7, 4, 19, 26};
-//        int n = arr.length, k = 3;
-
-
-        Set<Integer> list2 = new LinkedHashSet<Integer>();
-        Random r = new Random();
-        while( list2.size() < 20000 ) {
-            list2.add(r.nextInt(20000));
-        }
-
-        int n = list2.size();
-        Integer[] arr = new Integer[n];
-        arr = list2.toArray(arr);
-        n = arr.length;
-        int k = 17;
-
-        System.out.println("K'th smallest element is "
-                + medOfMeds.select(arr, 0, n - 1, k));
     }
 }
